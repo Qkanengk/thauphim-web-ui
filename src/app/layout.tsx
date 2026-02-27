@@ -12,7 +12,30 @@ const orbitron = Orbitron({
 
 export const metadata: Metadata = {
   title: "ThauPhim - Phim Hay Cả Thau",
-  description: "Tuyển tập những bộ phim mới nhất, xem phim online miễn phí chất lượng cao",
+  description: "ThauPhim - Điểm đến tối thượng cho người yêu điện ảnh. Tuyển tập phim lẻ, phim bộ, anime, và show truyền hình mới nhất cập nhật liên tục với chất lượng Full HD vietsub.",
+  keywords: "phim hay, thauphim, thau phim, thau phim hay cả thau, xem phim online, phim vietsub, phim chiếu rạp, phim hd, phim lẻ, phim bộ",
+  openGraph: {
+    title: "ThauPhim - Phim Hay Cả Thau",
+    description: "Tuyển tập những bộ phim mới nhất, xem phim online miễn phí chất lượng cao tại ThauPhim.",
+    url: "https://thauphim.com",
+    siteName: "ThauPhim",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+        alt: "ThauPhim Logo",
+      },
+    ],
+    locale: "vi_VN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ThauPhim - Phim Hay Cả Thau",
+    description: "Tuyển tập những bộ phim mới nhất, phim vietsub sắc nét.",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({
