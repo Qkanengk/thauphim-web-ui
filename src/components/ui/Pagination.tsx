@@ -55,7 +55,7 @@ const btnNormal =
 const btnDisabled =
   'bg-mecha-surface/30 text-gray-700 border border-white/5 cursor-not-allowed pointer-events-none rounded';
 
-export function Pagination({ currentPage, totalPages, basePath, searchParams, maxVisible = 5 }: PaginationProps) {
+export function Pagination({ currentPage, totalPages, basePath, searchParams, maxVisible = 3 }: PaginationProps) {
   if (totalPages <= 1) return null;
 
   const pages = getPageRange(currentPage, totalPages, maxVisible);
@@ -85,8 +85,8 @@ export function Pagination({ currentPage, totalPages, basePath, searchParams, ma
       {/* Page numbers */}
       {pages[0] > 1 && (
         <>
-          <Link href={buildPageUrl(basePath, 1, searchParams)} className={`${btnBase} ${btnNormal}`}>1</Link>
-          {pages[0] > 2 && <span className="text-gray-600 px-0.5 sm:px-1">…</span>}
+          <Link href={buildPageUrl(basePath, 1, searchParams)} className={`${btnBase} ${btnNormal} hidden sm:flex`}>1</Link>
+          {pages[0] > 2 && <span className="hidden sm:flex text-gray-600 px-0.5 sm:px-1 items-end pb-2">…</span>}
         </>
       )}
 
@@ -103,8 +103,8 @@ export function Pagination({ currentPage, totalPages, basePath, searchParams, ma
 
       {pages[pages.length - 1] < totalPages && (
         <>
-          {pages[pages.length - 1] < totalPages - 1 && <span className="text-gray-600 px-0.5 sm:px-1">…</span>}
-          <Link href={buildPageUrl(basePath, totalPages, searchParams)} className={`${btnBase} ${btnNormal}`}>{totalPages}</Link>
+          {pages[pages.length - 1] < totalPages - 1 && <span className="hidden sm:flex text-gray-600 px-0.5 sm:px-1 items-end pb-2">…</span>}
+          <Link href={buildPageUrl(basePath, totalPages, searchParams)} className={`${btnBase} ${btnNormal} hidden sm:flex`}>{totalPages}</Link>
         </>
       )}
 
@@ -116,13 +116,6 @@ export function Pagination({ currentPage, totalPages, basePath, searchParams, ma
       ) : (
         <Link href={buildPageUrl(basePath, currentPage + 1, searchParams)} className={`${btnBase} ${btnNormal} px-2 sm:px-3`}>
           <ChevronRight size={16} className="sm:w-5 sm:h-5" />
-        </Link>
-      )}
-
-      {/* Last page (Hide on very small screens to save space) */}
-      {currentPage < totalPages - 2 && totalPages > maxVisible && (
-        <Link href={buildPageUrl(basePath, totalPages, searchParams)} className={`${btnBase} ${btnNormal} hidden sm:flex px-2`}>
-          <ChevronsRight size={16} className="sm:w-5 sm:h-5" />
         </Link>
       )}
     </nav>
