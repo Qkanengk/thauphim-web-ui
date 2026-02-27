@@ -1,4 +1,5 @@
 import { Star, TrendingUp, Play, Trophy, Tv } from 'lucide-react';
+import Image from 'next/image';
 import { HeroCarousel } from '@/components/ui/HeroCarousel';
 import { MovieCard } from '@/components/ui/MovieCard';
 import { RankCard } from '@/components/ui/RankCard';
@@ -92,6 +93,47 @@ export default async function Home() {
           viewAllLink="/quoc-gia/thai-lan"
           movies={thMovies}
         />
+      </section>
+
+      {/* ADVERTISEMENT BANNERS */}
+      <section className="w-full py-8 px-4 sm:px-6 md:px-12 lg:px-20 border-b border-white/5 bg-black/20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          <Link 
+            href="https://quizken.vercel.app" 
+            target="_blank" 
+            className="relative aspect-[21/9] md:aspect-[16/7] overflow-hidden rounded-xl border border-white/10 group shadow-2xl transition-all duration-500 hover:border-mecha-accent/40"
+          >
+            <Image 
+              src="/ads-quizken.png" 
+              alt="Quizken Ads" 
+              fill 
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+            <div className="absolute bottom-4 left-6 z-10">
+              <span className="bg-mecha-accent text-mecha-dark text-[10px] font-black px-2 py-0.5 rounded tracking-tighter uppercase mb-2 inline-block">Sponsor</span>
+              <p className="text-white font-bold text-lg md:text-xl drop-shadow-lg">Khám phá tri thức cùng Quizken</p>
+            </div>
+          </Link>
+
+          <Link 
+            href="https://connect-cg.vercel.app" 
+            target="_blank" 
+            className="relative aspect-[21/9] md:aspect-[16/7] overflow-hidden rounded-xl border border-white/10 group shadow-2xl transition-all duration-500 hover:border-emerald-500/40"
+          >
+            <Image 
+              src="/ads-connect.png" 
+              alt="Connect Ads" 
+              fill 
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+            <div className="absolute bottom-4 left-6 z-10">
+              <span className="bg-emerald-500 text-white text-[10px] font-black px-2 py-0.5 rounded tracking-tighter uppercase mb-2 inline-block">Partner</span>
+              <p className="text-white font-bold text-lg md:text-xl drop-shadow-lg">Kết nối cơ hội tại Connect CG</p>
+            </div>
+          </Link>
+        </div>
       </section>
 
       {/* CONTENT GRID + RANKING SIDEBAR */}
