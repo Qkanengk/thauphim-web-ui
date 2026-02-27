@@ -56,8 +56,8 @@ export default async function MovieDetails(props: Props) {
         {/* Banner Content */}
         <div className="relative z-20 px-4 sm:px-6 md:px-12 lg:px-20 pb-20 md:pb-44 w-full h-full flex flex-col justify-end">
           
-          {/* Compact Quick Info Corner (Top Right) */}
-          <div className="absolute bottom-8 right-4 sm:right-6 md:right-12 lg:right-20 flex flex-col gap-4 text-right">
+          {/* Compact Quick Info Corner (Top Right) - Hidden on Mobile */}
+          <div className="absolute bottom-8 right-4 sm:right-6 md:right-12 lg:right-20 hidden md:flex flex-col gap-4 text-right">
              <div className="flex flex-col gap-0.5">
                 <span className="text-[10px] font-bold text-mecha-accent/60 uppercase tracking-widest">Đánh giá</span>
                 <div className="flex items-center gap-2 justify-end">
@@ -116,9 +116,9 @@ export default async function MovieDetails(props: Props) {
                   <span className="h-1 w-12 bg-mecha-accent block" />
                   <p className="text-xl md:text-2xl text-mecha-accent font-bold tracking-widest drop-shadow-md">{movie.origin_name}</p>
                 </div>
-                {/* Integrated Synopsis in Banner */}
+                {/* Integrated Synopsis in Banner - Hidden on Mobile */}
                 <div 
-                  className="text-gray-300/90 text-sm md:text-base leading-relaxed line-clamp-3 md:line-clamp-4 max-w-2xl drop-shadow-md mecha-content-html"
+                  className="hidden md:block text-gray-300/90 text-sm md:text-base leading-relaxed line-clamp-3 md:line-clamp-4 max-w-2xl drop-shadow-md mecha-content-html"
                   dangerouslySetInnerHTML={{ __html: movie.content }}
                 />
              </div>

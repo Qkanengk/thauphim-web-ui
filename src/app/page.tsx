@@ -60,15 +60,15 @@ export default async function Home() {
             {latestMovies.slice(0, 15).map((movie) => (
               <MovieCard 
                 key={movie._id} 
-              title={movie.name} 
-              img={`${IMG_CDN_URL}${movie.thumb_url}`} 
-              slug={movie.slug}
-              originName={movie.origin_name}
-              lang={movie.lang}
-              episode_current={movie.episode_current}
-              time={movie.time}
-              chamfer="tl-br"
-              className="min-w-[140px] sm:min-w-[180px] md:min-w-[200px]"
+                title={movie.name} 
+                img={`${IMG_CDN_URL}${movie.thumb_url}`} 
+                slug={movie.slug}
+                originName={movie.origin_name}
+                lang={movie.lang}
+                episode_current={movie.episode_current}
+                time={movie.time}
+                chamfer="tl-br"
+                className="w-[140px] sm:w-[160px] md:w-[170px] shrink-0"
               />
             ))}
           </div>
