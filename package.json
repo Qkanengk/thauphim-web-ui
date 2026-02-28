@@ -1,6 +1,7 @@
 {
   "name": "mecha-movie-site",
   "version": "0.1.0",
+  "description": "Dự án web xem phim ThauPhim phục vụ mục đích học tập và nghiên cứu (Educational Purposes Only).",
   "private": true,
   "scripts": {
     "dev": "next dev",

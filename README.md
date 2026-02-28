@@ -1,3 +1,7 @@
+# ThauPhim Web UI
+
+**Lưu ý:** Dự án này được tạo ra hoàn toàn phục vụ mục đích học tập và nghiên cứu (Educational Purposes Only).
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
