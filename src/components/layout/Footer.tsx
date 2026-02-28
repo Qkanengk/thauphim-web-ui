@@ -10,6 +10,9 @@ export default function Footer() {
             <h2 className="text-[#fec93d] text-lg font-bold leading-tight tracking-wider uppercase">THAU<span className="text-white">PHIM</span></h2>
           </div>
           <p className="text-gray-500 text-sm">Điểm đến tối thượng cho những tín đồ yêu thích điện ảnh với hàng ngàn bộ phim hay và đa dạng nhất.</p>
+          <div className="mt-2 text-xs text-yellow-500/80 bg-yellow-500/10 p-3 rounded-md border border-yellow-500/20 italic">
+            Dự án web xem phim ThauPhim được tạo ra hoàn toàn phục vụ mục đích học tập và nghiên cứu (Educational Purposes Only). Không sử dụng cho mục đích thương mại.
+          </div>
         </div>
         
         <div className="flex flex-col gap-3">
